@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this is welcome.html.twig file</title>
+</head>
+<body>
+{{ name }}  Age = {{ age }}
+
+{% set a = "user" %}
+{% set b = "html.twig" %}
+{% set c = a ~ "." ~ b %}
+
+{{ c }}
+{% include "user" ~ "." ~ b with{ 'name' : 'kranthi'} %}
+
+</body>
+</html>
