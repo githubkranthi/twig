@@ -7,11 +7,14 @@
  */
 
 require 'vendor/autoload.php';
+require 'extension/Extension.php';
 
-$loader = new Twig_Loader_Filesystem('views');
+$loader = new Extension('views');
+//$loader = new Twig_Loader_Filesystem('views');
+
 $twig   = new Twig_Environment($loader, ['debug' => true]);
 
-echo $twig->render('welcome.html.twig',[
+echo $twig->render('welcome',[
     'name' => "rama",
     'age'  => "52"
 ]);
